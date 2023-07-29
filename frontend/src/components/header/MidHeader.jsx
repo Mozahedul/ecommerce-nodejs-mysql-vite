@@ -1,12 +1,19 @@
 // import React, { useEffect, useState } from "react";
+import { useState } from "react";
+import CompareIcon from "../../assets/icons/CompareIcon";
 import MenubarIcon from "../../assets/icons/MenubarIcon";
 import SearchIcon from "../../assets/icons/SearchIcon";
-import CompareIcon from "../../assets/icons/CompareIcon";
-import WishlistIcon from "../../assets/icons/WishlistIcon";
-import UserIcon from "../../assets/icons/UserIcon";
 import ShopingIcon from "../../assets/icons/ShopingIcon";
+import UserIcon from "../../assets/icons/UserIcon";
+import WishlistIcon from "../../assets/icons/WishlistIcon";
+import Sidebar from "../../sections/Sidebar";
 
 const MidHeader = () => {
+  const [width, setWidth] = useState(0);
+  const handleSideBar = () => {
+    setWidth(280);
+  };
+
   return (
     <div className="pl-24 pr-24 pt-6 pb-6 flex items-center justify-between">
       <div>
@@ -14,9 +21,10 @@ const MidHeader = () => {
       </div>
       {/* Search bar */}
       <div className="flex items-center">
-        <button>
+        <button onClick={() => handleSideBar()}>
           <MenubarIcon css="inline-block w-8 h-8 mr-6" />
         </button>
+        <Sidebar width={width} setWidth={setWidth} />
         <div className="flex items-center border-2 border-orange-400">
           <form>
             <input
