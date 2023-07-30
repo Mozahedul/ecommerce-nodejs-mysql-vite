@@ -11,7 +11,7 @@ import Sidebar from "../../sections/Sidebar";
 const MidHeader = () => {
   const [width, setWidth] = useState(0);
   const handleSideBar = () => {
-    setWidth(280);
+    setWidth(320);
   };
 
   return (
