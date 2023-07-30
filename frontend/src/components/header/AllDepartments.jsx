@@ -18,7 +18,7 @@ const AllDepartments = () => {
       </button>
       <ul
         ref={depRef}
-        className={`absolute left-0 right-0 bg-gray-50 px-4 text-md text-gray-700 ${
+        className={`absolute z-50 left-0 right-0 bg-gray-50 px-4 text-md text-gray-700 ${
           show ? "block" : "hidden"
         }`}
       >

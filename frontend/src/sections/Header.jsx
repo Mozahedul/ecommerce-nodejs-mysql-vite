@@ -10,7 +10,7 @@ const Header = ({ children }) => {
       <TopHeader />
       <MidHeader />
       <BottomHeader />
-      <div className="ml-24 mr-24">
+      <div>
         {children}
         <Footer />
       </div>
