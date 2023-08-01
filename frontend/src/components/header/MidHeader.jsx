@@ -30,11 +30,11 @@ const MidHeader = () => {
             <input
               type="search"
               placeholder="Search for products"
-              className="border-none outline-none p-2"
+              className="border-none outline-none p-2 bg-transparent"
             />
           </form>
           <div className="pr-2">
-            <select className="text-gray-500 border-none outline-none">
+            <select className="text-gray-500 border-none outline-none bg-transparent">
               <option>All Categories</option>
               <option>Accessories</option>
               <option>Camera & Photography</option>
