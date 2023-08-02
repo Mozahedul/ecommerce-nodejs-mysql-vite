@@ -2,12 +2,12 @@ import CartIcon from "../assets/icons/CartIcon.jsx";
 import PropTypes from "prop-types";
 
 const RecentProduct = props => {
-  const { subtitle, title, url, price } = props;
+  const { width, subtitle, title, url, price } = props;
 
   return (
     <div
       className="flex flex-col justify-between bg-gray-100 p-3 mr-1"
-      style={{ minWidth: "16.66%" }}
+      style={{ minWidth: width }}
     >
       <div>
         <p className="text-gray-400 text-sm">{subtitle}</p>
@@ -25,6 +25,7 @@ const RecentProduct = props => {
 };
 
 RecentProduct.propTypes = {
+  width: PropTypes.number.isRequired,
   subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,

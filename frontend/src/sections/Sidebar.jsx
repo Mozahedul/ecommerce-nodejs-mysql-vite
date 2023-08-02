@@ -32,7 +32,7 @@ const Sidebar = ({ width, setWidth }) => {
         }}
       >
         <img
-          src="../../public/logo.svg"
+          src="/logo.svg"
           alt="home logo"
           className="w-24 mt-3 ml-2 absolute top-2 left-2"
         />

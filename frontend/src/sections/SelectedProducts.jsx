@@ -60,7 +60,7 @@ const SelectedProducts = () => {
         />
         <SelectedProduct
           title="Notebook Black Spire V Nitro VN7-591G"
-          url="../../public/on-saling/iphone.png"
+          url="/on-saling/iphone.png"
           price={1999.0}
         />
         <SelectedProduct

@@ -10,10 +10,8 @@ const Header = ({ children }) => {
       <TopHeader />
       <MidHeader />
       <BottomHeader />
-      <div>
-        {children}
-        <Footer />
-      </div>
+      {children}
+      <Footer />
     </div>
   );
 };

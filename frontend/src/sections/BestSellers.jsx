@@ -16,14 +16,14 @@ const BestSellers = () => {
         </div>
       </div>
 
-      <Carousel showArrows="true" showThumbs="false">
+      <Carousel showArrows={true} showThumbs={false}>
         <BestSeller />
         <BestSeller />
         <BestSeller />
       </Carousel>
       <div>
         <img
-          src="../../public/home-v5-banner.png"
+          src="/home-v5-banner.png"
           alt="advertisement"
           className="max-w-full"
         />

@@ -17,7 +17,7 @@ const MidHeader = () => {
   return (
     <div className="pl-24 pr-24 pt-6 pb-6 flex items-center justify-between">
       <div>
-        <img className="w-32" src="../../../public/logo.svg" alt="logo" />
+        <img className="w-32" src="/logo.svg" alt="logo" />
       </div>
       {/* Search bar */}
       <div className="flex items-center">
