@@ -3,7 +3,7 @@ import BestSeller from "./BestSeller.jsx";
 
 const BestSellers = () => {
   return (
-    <div className="pl-24 pr-24 bg-white mt-8 pt-4">
+    <div className="pl-24 pr-24 bg-white mt-8 pt-4 pb-4">
       <div className="flex justify-between items-center border-b-2 py-3">
         <p className="text-2xl text-gray-600">Best Sellers</p>
         <div className="text-gray-500">
