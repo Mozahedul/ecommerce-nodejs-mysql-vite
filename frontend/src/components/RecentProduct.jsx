@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 
 const RecentProduct = props => {
   const { width, subtitle, title, url, price } = props;
+  // console.clear();
+  console.log("WIDTH ==> ", width);
 
   return (
     <div
-      className="flex flex-col justify-between bg-gray-100 p-3 mr-1"
+      className="flex flex-col justify-between bg-gray-100 p-3 shadow-md"
       style={{ minWidth: width }}
     >
       <div>

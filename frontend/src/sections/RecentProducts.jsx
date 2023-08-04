@@ -4,37 +4,185 @@ import RightArrowIcon from "../assets/icons/RightArrowIcon";
 import RecentProduct from "../components/RecentProduct";
 
 const RecentProducts = () => {
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState(0);
+  const [isLeftBtnDisabled, setIsLeftBtnDisabled] = useState(true);
+  const [isRightBtnDisabled, setIsRightBtnDisabled] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-  const responsiveHandle = () => {
-    const element = document.getElementById("container");
-    const totalWidth = element.clientWidth;
-    const elementNumber = Math.floor(totalWidth / 180);
-    const elementWidth = Math.floor(totalWidth / elementNumber) - 2;
-    setWidth(elementWidth);
+  const [activeBtn, setActiveBtn] = useState(0);
+
+  const element = document.getElementById("container");
+  const totalWidth = element?.clientWidth;
+  const elementNumber = Math.floor(totalWidth / 190);
+  const elementWidth = Math.floor(totalWidth / elementNumber);
+
+  // Find out the number of child component
+  const numberOfChildComponents = element?.children.length;
+  const numberOfDots = Math.ceil(numberOfChildComponents / elementNumber);
+
+  // Handle right arrow
+  // let scrollPosition = 0;
+
+  const handleRightArrow = () => {
+    let newScrollPosition = scrollPosition + elementWidth;
+
+    const hiddenWidth = element.scrollWidth - element.offsetWidth;
+    // const scrollDiff = hiddenWidth - newScrollPosition;
+
+    // When the scroll reaches to the last point of the container
+    // we disable the right arrow button
+    // scroll position set to the last point of the container
+    if (newScrollPosition >= hiddenWidth) {
+      setIsRightBtnDisabled(true);
+      setScrollPosition(hiddenWidth);
+      newScrollPosition = hiddenWidth;
+    } else {
+      newScrollPosition = scrollPosition + elementWidth;
+      setScrollPosition(newScrollPosition);
+    }
+
+    if (newScrollPosition >= 0) {
+      setIsLeftBtnDisabled(false);
+    }
+
+    element.scrollTo({
+      top: 0,
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
   };
 
-  window.addEventListener("resize", responsiveHandle);
+  // to slide a single product ## left arrow button
+  const handleLeftArrow = () => {
+    let newScrollPosition = scrollPosition - elementWidth;
+
+    // click on right slider button for the first time
+    // then continue to slide until the last
+    if (newScrollPosition >= elementWidth) {
+      setScrollPosition(newScrollPosition);
+    }
+
+    // If the slide exists at the first, then disable the left arrow button.
+    // enable the right arrow button, and set the scroll position to 0
+    if (newScrollPosition < elementWidth || newScrollPosition === 0) {
+      setIsLeftBtnDisabled(true);
+      setIsRightBtnDisabled(false);
+      setScrollPosition(0);
+      newScrollPosition = 0;
+    }
+
+    /**
+     * If the scroll position exists at the right end, and we click
+     * left arrow button once the right arrow button will enable
+     */
+    if (newScrollPosition < element.scrollWidth - element.offsetWidth) {
+      setIsRightBtnDisabled(false);
+    }
+
+    element.scrollTo({
+      top: 0,
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
+  };
+
+  // Handle dot slider
+  const handleDot = (event, index) => {
+    let dotBtns = document.querySelectorAll("#dotBtn");
+    for (let i = 0; i < dotBtns.length; i++) {
+      dotBtns[i].style.width = "12px";
+      dotBtns[i].style.backgroundColor = "lightGray";
+    }
+    event.target.style.width = "24px";
+    event.target.style.backgroundColor = "orange";
+
+    let newScrollPosition = element.offsetWidth * index;
+
+    if (newScrollPosition < element.offsetWidth) {
+      setIsLeftBtnDisabled(true);
+      setIsRightBtnDisabled(false);
+      setScrollPosition(0);
+    }
+
+    if (newScrollPosition > element.scrollWidth - element.offsetWidth) {
+      setIsRightBtnDisabled(true);
+      setIsLeftBtnDisabled(false);
+    }
+
+    setScrollPosition(newScrollPosition);
+
+    element.scrollTo({
+      top: 0,
+      left: newScrollPosition,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
-    responsiveHandle();
+    const element = document.getElementById("container");
+    const totalWidth = element?.clientWidth;
+    const elementNumber = Math.floor(totalWidth / 190);
+    const elementWidth = Math.floor(totalWidth / elementNumber);
+    setWidth(elementWidth);
+
+    // By default, the first dot will be highlighted
+    const dotBtns = document.getElementById("#dotBtn");
+    console.log("dot BUTTON ==> ", dotBtns);
+
+    // leftArrow.disabled = true;
+    element.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    setScrollPosition(0);
   }, []);
 
+  window.addEventListener("resize", () => {
+    const element = document.getElementById("container");
+    const totalWidth = element?.clientWidth;
+    const elementNumber = Math.floor(totalWidth / 190);
+    const elementWidth = Math.floor(totalWidth / elementNumber);
+    setWidth(elementWidth);
+    setScrollPosition(0);
+    setIsLeftBtnDisabled(true);
+    setIsRightBtnDisabled(false);
+    element.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+
   return (
-    <div className="px-24 bg-white mt-10 pt-6 pb-6" id="main">
+    <div className="px-6 lg:px-24 bg-white mt-10 pt-6 pb-6" id="main">
       {/* heading */}
       <div className="flex justify-between items-center border-b-2 pb-3">
         <h2 className="text-2xl text-gray-600">Recently Added</h2>
         <div>
-          <button className="mr-1 text-gray-400 transition-all duration-500 hover:text-gray-600 focus:text-orange-400">
+          <button
+            disabled={isLeftBtnDisabled}
+            id="btnLeft"
+            onClick={() => handleLeftArrow()}
+            className="mr-1 text-gray-600 transition-all duration-500 hover:text-gray-600 focus:text-orange-400 disabled:opacity-25"
+          >
             <LeftArrowIcon css="w-5 h-5" />
           </button>
-          <button className="text-gray-400 transition-all duration-500 hover:text-gray-600 focus:text-orange-400">
+          <button
+            disabled={isRightBtnDisabled}
+            id="btnRight"
+            onClick={() => handleRightArrow()}
+            className="text-gray-600 transition-all duration-500 hover:text-gray-600 focus:text-orange-400 disabled:opacity-25"
+          >
             <RightArrowIcon css="w-5 h-5" />
           </button>
         </div>
       </div>
       {/* Product cards */}
-      <div className="flex mt-2 flex-nowrap overflow-x-hidden" id="container">
+      <div
+        className="flex mt-2 flex-nowrap overflow-x-hidden visible:last:mr-2"
+        id="container"
+      >
         <RecentProduct
           width={width}
           subtitle="Headphones Cases"
@@ -93,7 +241,20 @@ const RecentProducts = () => {
         />
       </div>
       {/* slider dots */}
-      <div></div>
+      <div className="flex justify-center items-center mt-4">
+        {Array.from({ length: numberOfDots }, () => null).map((item, index) => (
+          <button
+            id="dotBtn"
+            onClick={event => handleDot(event, index)}
+            key={index}
+            className={`w-3 h-3  m-1 rounded-full transition-all duration-300  ${
+              index === activeBtn
+                ? "bg-orange-400 w-6"
+                : "bg-gray-200 hover:bg-gray-400 focus:bg-orange-400"
+            } `}
+          ></button>
+        ))}
+      </div>
     </div>
   );
 };
