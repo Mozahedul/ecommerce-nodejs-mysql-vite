@@ -1,15 +1,16 @@
-import React from "react";
 import RightArrowIcon from "../assets/icons/RightArrowIcon";
 
 const Deal = () => {
   return (
-    <div className="pl-24 pr-24 flex items-start mt-8">
-      <div className="flex items-center justify-around bg-white p-3 w-1/3 mr-6">
+    <div className="px-4 flex items-start mt-8 lg:px-8 overflow-x-auto lg:overflow-x-hidden">
+      <div
+        className="justify-around h-40 bg-white p-2 mr-3 lg:p-3 lg:justify-between flex items-center "
+        style={{ minWidth: "300px" }}
+      >
         <img className="max-w-full" src="/deal/camera.png" alt="camera" />
         <div>
-          <p className="text-xl text-gray-600 font-thin leading-6 uppercase">
-            Catch big <br /> deals on the
-            <br /> cameras
+          <p className="text-xl text-gray-600 font-thin leading-6 uppercase break-words">
+            Catch big deals on the cameras
           </p>
           <button className="mt-2 font-bold text-md">
             Shop Now
@@ -17,12 +18,14 @@ const Deal = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-around bg-white p-3 w-1/3 mr-6">
+      <div
+        className="flex h-40 items-center justify-around bg-white p-2 mr-3 lg:mt-0 lg:p-3  lg:justify-between"
+        style={{ minWidth: "300px" }}
+      >
         <img className="max-w-full" src="/deal/laptop.png" alt="camera" />
         <div>
-          <p className="text-xl text-gray-600 font-thin leading-6 uppercase">
-            Tables, <br /> Smartphones
-            <br /> & More
+          <p className="text-xl text-gray-600 font-thin leading-6 uppercase break-words">
+            Tables, Smart phones & More
           </p>
           <button className="mt-2 font-bold text-md">
             Up to 60%
@@ -30,12 +33,14 @@ const Deal = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-around bg-white p-3 w-1/3">
-        <img className="max-w-full" src="/deal/desktop.png" alt="camera" />
+      <div
+        className="flex h-40 items-center justify-around bg-white p-2 lg:mt-0 lg:p-3  lg:justify-between"
+        style={{ minWidth: "300px" }}
+      >
+        <img className="max-w-full w-40" src="/deal/desktop.png" alt="camera" />
         <div>
-          <p className="text-xl text-gray-600 font-thin leading-6">
-            Shop the, <br /> hottest
-            <br /> products
+          <p className="text-xl text-gray-600 font-thin leading-6 break-words">
+            Shop the, hottest products
           </p>
           <button className="mt-2 font-bold text-md">
             Shop Now

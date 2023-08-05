@@ -21,11 +21,11 @@ const SpecialOffer = () => {
   };
 
   return (
-    <div className="pl-24 pr-24 mt-12 flex">
-      <div className="border-2 border-orange-400 rounded-lg p-6 w-1/3 h-fit">
+    <div className="px-8 mt-12 flex flex-col lg:flex-row">
+      <div className="border-2 mb-8 border-orange-400 rounded-lg p-6 w-full h-fit text-center lg:mb-0 lg:w-1/3">
         <h2 className="font-semibold text-gray-500 text-xl">Special Offer</h2>
         <img
-          className="max-w-full mt-6"
+          className="max-w-full mt-6 m-auto"
           src="/special/game_console.png"
           alt="game console"
         />
@@ -36,7 +36,7 @@ const SpecialOffer = () => {
           $99.00
         </p>
       </div>
-      <div className="w-2/3 ml-6">
+      <div className="w-full lg:w-2/3 lg:ml-6">
         <div className="border-b-2 w-full text-center text-gray-500 font-normal text-lg">
           <button
             onClick={event => handleProducts(event, "featured")}
@@ -59,7 +59,7 @@ const SpecialOffer = () => {
         </div>
         {/* Featured */}
         <div id="featured" className="product">
-          <div className="flex mt-2">
+          <div className="flex flex-wrap mt-2">
             <Special
               subtitle="Audio Speakers"
               title="Wireless Audio System Multiroom 360"
@@ -78,8 +78,8 @@ const SpecialOffer = () => {
               url="/featured/uniheadphone.png"
               price={248.0}
             />
-          </div>
-          <div className="flex mt-2">
+            {/* </div>
+          <div className="flex mt-2"> */}
             <Special
               subtitle="Smartphones"
               title="Smartphone 6S 32GB LTE"
@@ -103,7 +103,7 @@ const SpecialOffer = () => {
 
         {/* On Sale */}
         <div id="onSale" className="product" style={{ display: "none" }}>
-          <div className="flex mt-2">
+          <div className="flex flex-wrap mt-2">
             <Special
               subtitle="Computer Cases, Servers"
               title="Aerocool EN52377 Dead Silence Gaming Cube Case"
@@ -122,8 +122,8 @@ const SpecialOffer = () => {
               url="/onSale/powerbank.png"
               price={200.0}
             />
-          </div>
-          <div className="flex mt-2">
+            {/* </div>
+          <div className="flex mt-2"> */}
             <Special
               subtitle="Smartwatches"
               title="Smartwatch 2.0 LTE Wifi Waterproof"
@@ -147,7 +147,7 @@ const SpecialOffer = () => {
 
         {/* Top Rated */}
         <div id="topRated" className="product" style={{ display: "none" }}>
-          <div className="flex mt-2">
+          <div className="flex flex-wrap mt-2">
             <Special
               subtitle="Headphone Cases"
               title="Universal Headphones Case in Black"
@@ -166,8 +166,8 @@ const SpecialOffer = () => {
               url="/topRated/headphone.png"
               price={350.0}
             />
-          </div>
-          <div className="flex mt-2">
+            {/* </div>
+          <div className="flex mt-2"> */}
             <Special
               subtitle="Audio Speakers"
               title="Wireless Audio System Multiroom 360"

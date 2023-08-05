@@ -3,25 +3,28 @@ import CartIcon from "../assets/icons/CartIcon.jsx";
 
 const BestDeals = () => {
   return (
-    <div className="mt-12 pt-4 pl-24 pr-24 pb-8 bg-white">
-      <div className="flex justify-center text-gray-500 border-b-2 font-medium">
-        <button className="mr-6 text-sm border-b-4 py-2 border-orange-400">
+    <div className="mt-12 bg-white px-8 pb-8 pt-4">
+      <div
+        id="mainMenu"
+        className="flex overflow-x-auto whitespace-nowrap border-b-2 font-medium text-gray-500 lg:justify-center"
+      >
+        <button className="mr-6 border-b-4 border-orange-400 py-2 text-sm">
           Best Deals
         </button>
-        <button className="mr-6  py-2 text-sm">TV & Audio</button>
-        <button className="mr-6  py-2 text-sm">Cameras</button>
-        <button className="mr-6  py-2 text-sm">Audio</button>
-        <button className="mr-6  py-2 text-sm">Smartphones</button>
-        <button className="mr-6  py-2 text-sm">GPS & Navigation</button>
-        <button className="mr-6  py-2 text-sm">Computers</button>
-        <button className="mr-6  py-2 text-sm">Portable Audio</button>
+        <button className="mr-6 py-2 text-sm">TV & Audio</button>
+        <button className="mr-6 py-2 text-sm">Cameras</button>
+        <button className="mr-6 py-2 text-sm">Audio</button>
+        <button className="mr-6 py-2 text-sm">Smartphones</button>
+        <button className="mr-6 py-2 text-sm">GPS & Navigation</button>
+        <button className="mr-6 py-2 text-sm">Computers</button>
+        <button className="mr-6 py-2 text-sm">Portable Audio</button>
         <button className="py-2 text-sm">Accessories</button>
       </div>
-      <div className="flex mt-2">
-        <div className="flex flex-col w-1/4">
-          <div className="flex flex-col justify-between mb-2 bg-gray-100 p-4">
-            <p className="text-gray-400 text-sm">Power Banks</p>
-            <h2 className="text-sky-600 text-lg font-semibold">
+      <div className="mt-2 flex flex-col md:flex-row">
+        <div className="flex flex-col md:w-1/3 lg:w-1/4">
+          <div className="mb-2 flex flex-col justify-between bg-gray-100 p-4">
+            <p className="text-sm text-gray-400">Power Banks</p>
+            <h2 className="text-lg font-semibold text-sky-600">
               Powerbank 1130 mAh Blue
             </h2>
             <img
@@ -30,17 +33,17 @@ const BestDeals = () => {
               alt="power bank"
             />
             <p className="flex justify-between">
-              <span className="text-xl text-red-700 font-semibold">
+              <span className="text-xl font-semibold text-red-700">
                 $200.00
               </span>
-              <button className="bg-gray-300 hover:bg-orange-400 p-2 text-white transition-all duration-500 rounded-full">
+              <button className="rounded-full bg-gray-300 p-2 text-white transition-all duration-500 hover:bg-orange-400">
                 <RightArrowIconLong css="w-4 h-4" />
               </button>
             </p>
           </div>
           <div className="flex flex-col justify-between bg-gray-100 p-4">
-            <p className="text-gray-400 text-sm">Laptops</p>
-            <h2 className="text-sky-600 text-lg font-semibold">
+            <p className="text-sm text-gray-400">Laptops</p>
+            <h2 className="text-lg font-semibold text-sky-600">
               Laptop Screener CX70 2QF-621XPL 17.3″ 4210
             </h2>
             <img
@@ -49,19 +52,19 @@ const BestDeals = () => {
               alt="power bank"
             />
             <p className="flex justify-between">
-              <span className="text-xl text-gray-700 font-semibold">
+              <span className="text-xl font-semibold text-gray-700">
                 $2399.00
               </span>
-              <button className="bg-gray-300 hover:bg-orange-400 p-2 text-white transition-all duration-500 rounded-full">
+              <button className="rounded-full bg-gray-300 p-2 text-white transition-all duration-500 hover:bg-orange-400">
                 <CartIcon css="w-4 h-4" />
               </button>
             </p>
           </div>
         </div>
-        <div className="w-1/2 bg-gray-100 ml-2 mr-2 p-5 flex flex-col justify-between">
+        <div className="my-2 flex flex-col justify-between bg-gray-100 p-2 md:mx-2 md:my-0 md:w-1/3 lg:my-0 lg:ml-2 lg:mr-2 lg:w-1/2 lg:p-4">
           <div>
-            <p className="text-gray-400 text-sm">Game Consoles</p>
-            <h2 className="text-sky-600 font-semibold">
+            <p className="text-sm text-gray-400">Game Consoles</p>
+            <h2 className="font-semibold text-sky-600">
               Game Console Controller + USB3.0 Cable
             </h2>
           </div>
@@ -70,34 +73,34 @@ const BestDeals = () => {
             alt="best deal"
             className="max-w-full"
           />
-          <div className="flex">
+          <div className="flex justify-center">
             <img
-              className="cursor-pointer w-16 p-2 mr-2 border-2 max-w-full"
+              className="w-16 max-w-full cursor-pointer border-2 p-2 md:mr-1 lg:mr-2"
               src="/best-deals/consal2.png"
               alt="console 2"
             />
             <img
-              className="cursor-pointer w-16 p-2 mr-2 border-2 max-w-full"
+              className="w-16 max-w-full cursor-pointer border-2 p-2 md:mr-1 lg:mr-2"
               src="/best-deals/gade1.png"
               alt="gade1"
             />
             <img
-              className="cursor-pointer w-16 p-2 border-2 max-w-full"
+              className="w-16 max-w-full cursor-pointer border-2 p-2"
               src="/best-deals/gadtet.png"
               alt="console 3"
             />
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-600 font-semibold text-xl">$99.00</span>
-            <button className="bg-orange-400 rounded-full px-4 py-1 font-bold text-white transition-all duration-500 hover:bg-blue-600">
+            <span className="text-xl font-semibold text-gray-600">$99.00</span>
+            <button className="rounded-full bg-orange-400 p-1 font-semibold text-white transition-all duration-500 hover:bg-blue-600 md:px-4 md:text-sm md:font-bold lg:px-3 lg:py-2 lg:text-base">
               <CartIcon css="w-4 h-4 inline-block" /> Add to cart
             </button>
           </div>
         </div>
-        <div className="flex flex-col w-1/4">
-          <div className="flex flex-col justify-between mb-2 bg-gray-100 p-4">
-            <p className="text-gray-400 text-sm">Computer Cases, Servers</p>
-            <h2 className="text-sky-600 text-lg font-semibold">
+        <div className="flex flex-col md:w-1/3 lg:w-1/4">
+          <div className="mb-2 flex flex-col justify-between bg-gray-100 p-4">
+            <p className="text-sm text-gray-400">Computer Cases, Servers</p>
+            <h2 className="text-lg font-semibold text-sky-600">
               Aerocool EN52377 Dead Silence Gaming Cube Case
             </h2>
             <img
@@ -106,17 +109,17 @@ const BestDeals = () => {
               alt="power bank"
             />
             <p className="flex justify-between">
-              <span className="text-xl text-red-700 font-semibold">
+              <span className="text-xl font-semibold text-red-700">
                 $150.00
               </span>
-              <button className="bg-gray-300 hover:bg-orange-400 p-2 text-white transition-all duration-500 rounded-full">
+              <button className="rounded-full bg-gray-300 p-2 text-white transition-all duration-500 hover:bg-orange-400">
                 <RightArrowIconLong css="w-4 h-4" />
               </button>
             </p>
           </div>
           <div className="flex flex-col justify-between bg-gray-100 p-4">
-            <p className="text-gray-400 text-sm">TVs</p>
-            <h2 className="text-sky-600 text-lg font-semibold">
+            <p className="text-sm text-gray-400">TVs</p>
+            <h2 className="text-lg font-semibold text-sky-600">
               Widescreen 4K SUHD TV
             </h2>
             <img
@@ -125,10 +128,10 @@ const BestDeals = () => {
               alt="power bank"
             />
             <p className="flex justify-between">
-              <span className="text-xl text-gray-700 font-semibold">
+              <span className="text-xl font-semibold text-gray-700">
                 $3299.00
               </span>
-              <button className="bg-gray-300 hover:bg-orange-400 p-2 text-white transition-all duration-500 rounded-full">
+              <button className="rounded-full bg-gray-300 p-2 text-white transition-all duration-500 hover:bg-orange-400">
                 <CartIcon css="w-4 h-4" />
               </button>
             </p>

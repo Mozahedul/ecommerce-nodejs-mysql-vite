@@ -157,14 +157,15 @@ const RecentProducts = () => {
   return (
     <div className="px-6 lg:px-24 bg-white mt-10 pt-6 pb-6" id="main">
       {/* heading */}
-      <div className="flex justify-between items-center border-b-2 pb-3">
+      <div className="items-center border-b-2 pb-3 flex justify-between">
         <h2 className="text-2xl text-gray-600">Recently Added</h2>
         <div>
           <button
             disabled={isLeftBtnDisabled}
             id="btnLeft"
             onClick={() => handleLeftArrow()}
-            className="mr-1 text-gray-600 transition-all duration-500 hover:text-gray-600 focus:text-orange-400 disabled:opacity-25"
+            className="hover:text-gray-600 
+            focus:text-orange-400 disabled:opacity-25 mr-1 text-gray-600 transition-all duration-500"
           >
             <LeftArrowIcon css="w-5 h-5" />
           </button>

@@ -20,7 +20,7 @@ const Special = props => {
     <div
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverOut}
-      className={`p-6 bg-white mr-2 rounded-md flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:cursor-pointer`}
+      className="shadow-md mt-1 w-1/2 md:w-1/3 p-6 bg-white last:mr-0 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:cursor-pointer"
     >
       <div>
         <p className="text-xs text-gray-400">{subtitle}</p>
