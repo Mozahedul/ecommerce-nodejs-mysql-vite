@@ -3,7 +3,7 @@ import BestSellingProduct from "../components/BestSellingProduct";
 const BestSeller = () => {
   return (
     <div>
-      <div className="flex justify-between">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3">
         <BestSellingProduct
           subtitle="Game Consoles"
           title="Game Console Controller + USB 3.0 Cable"
@@ -22,8 +22,8 @@ const BestSeller = () => {
           url="/best-sellers/apptablet-300x300.png"
           price={2100.0}
         />
-      </div>
-      <div className="flex justify-between">
+        {/* </div>
+      <div className="flex flex-col justify-between md:flex-row"> */}
         <BestSellingProduct
           subtitle="Headphones"
           title="Purple Solo 2 Wireless"

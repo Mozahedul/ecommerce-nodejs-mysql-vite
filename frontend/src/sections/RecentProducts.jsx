@@ -155,17 +155,17 @@ const RecentProducts = () => {
   });
 
   return (
-    <div className="px-6 lg:px-24 bg-white mt-10 pt-6 pb-6" id="main">
+    <div className="mt-10 bg-white px-8 pb-6 pt-6" id="main">
       {/* heading */}
-      <div className="items-center border-b-2 pb-3 flex justify-between">
+      <div className="flex items-center justify-between border-b-2 pb-3">
         <h2 className="text-2xl text-gray-600">Recently Added</h2>
         <div>
           <button
             disabled={isLeftBtnDisabled}
             id="btnLeft"
             onClick={() => handleLeftArrow()}
-            className="hover:text-gray-600 
-            focus:text-orange-400 disabled:opacity-25 mr-1 text-gray-600 transition-all duration-500"
+            className="mr-1 
+            text-gray-600 transition-all duration-500 hover:text-gray-600 focus:text-orange-400 disabled:opacity-25"
           >
             <LeftArrowIcon css="w-5 h-5" />
           </button>
@@ -181,7 +181,7 @@ const RecentProducts = () => {
       </div>
       {/* Product cards */}
       <div
-        className="flex mt-2 flex-nowrap overflow-x-hidden visible:last:mr-2"
+        className="visible:last:mr-2 mt-2 flex flex-nowrap overflow-x-hidden"
         id="container"
       >
         <RecentProduct
@@ -242,15 +242,15 @@ const RecentProducts = () => {
         />
       </div>
       {/* slider dots */}
-      <div className="flex justify-center items-center mt-4">
+      <div className="mt-4 flex items-center justify-center">
         {Array.from({ length: numberOfDots }, () => null).map((item, index) => (
           <button
             id="dotBtn"
-            onClick={event => handleDot(event, index)}
+            onClick={(event) => handleDot(event, index)}
             key={index}
-            className={`w-3 h-3  m-1 rounded-full transition-all duration-300  ${
+            className={`m-1 h-3  w-3 rounded-full transition-all duration-300  ${
               index === activeBtn
-                ? "bg-orange-400 w-6"
+                ? "w-6 bg-orange-400"
                 : "bg-gray-200 hover:bg-gray-400 focus:bg-orange-400"
             } `}
           ></button>

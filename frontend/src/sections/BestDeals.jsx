@@ -6,7 +6,7 @@ const BestDeals = () => {
     <div className="mt-12 bg-white px-8 pb-8 pt-4">
       <div
         id="mainMenu"
-        className="flex overflow-x-auto whitespace-nowrap border-b-2 font-medium text-gray-500 lg:justify-center"
+        className="flex w-full overflow-x-auto whitespace-nowrap border-b-2 font-medium text-gray-500 lg:justify-center"
       >
         <button className="mr-6 border-b-4 border-orange-400 py-2 text-sm">
           Best Deals

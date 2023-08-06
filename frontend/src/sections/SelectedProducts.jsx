@@ -1,11 +1,10 @@
-import React from "react";
 import SelectedProduct from "../components/SelectedProduct";
 
 const SelectedProducts = () => {
   return (
-    <div className="pl-24 pr-24 bg-white mt-6 flex">
-      <div className="pt-6 w-1/4 flex flex-col">
-        <h2 className="text-xl font-semibold text-gray-700 border-b-2 pb-3">
+    <div className="mt-6 grid grid-cols-1 bg-white px-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="flex flex-col pt-6">
+        <h2 className="border-b-2 pb-3 text-xl font-semibold text-gray-700">
           Featured Products
         </h2>
         {/* <div className="flex flex-col"> */}
@@ -26,8 +25,8 @@ const SelectedProducts = () => {
         />
         {/* </div> */}
       </div>
-      <div className="pt-6 w-1/4 flex flex-col ml-1 mr-1">
-        <h2 className="text-xl font-semibold text-gray-700 border-b-2 pb-3">
+      <div className="ml-1 mr-1 flex flex-col pt-6">
+        <h2 className="border-b-2 pb-3 text-xl font-semibold text-gray-700">
           Top Selling Products
         </h2>
         {/* <div className="flex flex-col"> */}
@@ -48,8 +47,8 @@ const SelectedProducts = () => {
         />
         {/* </div> */}
       </div>
-      <div className="pt-6 w-1/4 flex flex-col">
-        <h2 className="text-xl font-semibold text-gray-700 border-b-2 pb-3">
+      <div className="flex flex-col pt-6">
+        <h2 className="border-b-2 pb-3 text-xl font-semibold text-gray-700">
           On-sale Products
         </h2>
         {/* <div className="flex flex-col"> */}
@@ -70,11 +69,11 @@ const SelectedProducts = () => {
         />
         {/* </div> */}
       </div>
-      <div className="w-1/4 mt-12">
+      <div className="mb-4 mt-4 md:mb-0 md:mt-12">
         <img
           src="/footer-widget.jpg"
           alt="footer widget"
-          className="max-w-full ml-6"
+          className="ml-6 max-w-full"
         />
       </div>
     </div>
