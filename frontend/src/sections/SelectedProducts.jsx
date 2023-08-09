@@ -73,7 +73,7 @@ const SelectedProducts = () => {
         <img
           src="/footer-widget.jpg"
           alt="footer widget"
-          className="ml-6 max-w-full"
+          className="max-w-full md:ml-6"
         />
       </div>
     </div>

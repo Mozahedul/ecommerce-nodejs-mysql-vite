@@ -6,12 +6,14 @@ const BestSellingProduct = (props) => {
   const { subtitle, title, url, price } = props;
   return (
     <div className="flex items-center justify-between border-b-2 p-6 last:border-b-0 md:border-none md:p-3 md:shadow-sm">
-      <img
-        src={url}
-        alt="console"
-        style={{ maxWidth: "100%", width: "150px" }}
-        className="w-2/5"
-      />
+      <div className="w-2/5">
+        <img
+          src={url}
+          alt="console"
+          className="max-w-full"
+          // style={{ maxWidth: "100%", width: "150px" }}
+        />
+      </div>
       <div className="ml-6 flex w-3/5 flex-col">
         <p className="text-left text-sm text-gray-400">{subtitle}</p>
         <h2 className="text-left text-base font-bold text-sky-600">{title}</h2>

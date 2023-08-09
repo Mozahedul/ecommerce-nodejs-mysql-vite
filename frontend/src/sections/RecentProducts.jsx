@@ -16,6 +16,8 @@ const RecentProducts = () => {
   const elementNumber = Math.floor(totalWidth / 190);
   const elementWidth = Math.floor(totalWidth / elementNumber);
 
+  console.log("ELEMENT WIDTH ==> ", elementWidth);
+
   // Find out the number of child component
   const numberOfChildComponents = element?.children.length;
   const numberOfDots = Math.ceil(numberOfChildComponents / elementNumber);
@@ -45,7 +47,7 @@ const RecentProducts = () => {
       setIsLeftBtnDisabled(false);
     }
 
-    element.scrollTo({
+    element?.scrollTo({
       top: 0,
       left: newScrollPosition,
       behavior: "smooth",
@@ -248,11 +250,11 @@ const RecentProducts = () => {
             id="dotBtn"
             onClick={(event) => handleDot(event, index)}
             key={index}
-            className={`m-1 h-3  w-3 rounded-full transition-all duration-300  ${
-              index === activeBtn
-                ? "w-6 bg-orange-400"
-                : "bg-gray-200 hover:bg-gray-400 focus:bg-orange-400"
-            } `}
+            className={`m-1 h-3  w-3 rounded-full transition-all 
+               ${
+                 index === 0 ? "w-6 bg-orange-400" : "bg-gray-200"
+               } duration-300 hover:bg-gray-400 focus:bg-orange-400
+             `}
           ></button>
         ))}
       </div>

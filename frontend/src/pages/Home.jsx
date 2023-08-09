@@ -7,6 +7,7 @@ import BestSellers from "../sections/BestSellers";
 import RecentProducts from "../sections/RecentProducts";
 import SelectedProducts from "../sections/SelectedProducts";
 import Newsletter from "../sections/Newsletter";
+import BrandPartner from "../sections/BrandPartner";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <BestDeals />
         <BestSellers />
         <RecentProducts />
+        <BrandPartner />
         <SelectedProducts />
         <Newsletter />
       </Header>

@@ -73,7 +73,7 @@ const BestDeals = () => {
             alt="best deal"
             className="max-w-full"
           />
-          <div className="flex justify-center">
+          <div className="mb-4 flex justify-center md:mb-0">
             <img
               className="w-16 max-w-full cursor-pointer border-2 p-2 md:mr-1 lg:mr-2"
               src="/best-deals/consal2.png"
@@ -92,7 +92,7 @@ const BestDeals = () => {
           </div>
           <div className="flex justify-between">
             <span className="text-xl font-semibold text-gray-600">$99.00</span>
-            <button className="rounded-full bg-orange-400 p-1 font-semibold text-white transition-all duration-500 hover:bg-blue-600 md:px-4 md:text-sm md:font-bold lg:px-3 lg:py-2 lg:text-base">
+            <button className="rounded-full bg-orange-400 px-2 py-1 text-sm font-semibold text-white transition-all duration-500 hover:bg-blue-600 md:px-4 md:text-sm md:font-bold lg:px-3 lg:py-2 lg:text-base">
               <CartIcon css="w-4 h-4 inline-block" /> Add to cart
             </button>
           </div>

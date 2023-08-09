@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import BarIcon from "../../assets/icons/BarIcon";
 
 const AllDepartments = () => {
@@ -12,9 +12,9 @@ const AllDepartments = () => {
     <div className="relative mr-8">
       <button
         onClick={() => handleMenu()}
-        className="flex w-72 items-center rounded-t-md bg-orange-400 px-4 py-2 text-left font-bold text-gray-700"
+        className="flex w-52 items-center rounded-t-md bg-orange-400 px-4 py-2 text-left font-bold text-gray-700 md:w-72"
       >
-        <BarIcon css="w-6 h-6 mr-2 " /> All Departments
+        <BarIcon css="w-3 h-3 md:w-6 md:h-6" /> All Departments
       </button>
       <ul
         ref={depRef}

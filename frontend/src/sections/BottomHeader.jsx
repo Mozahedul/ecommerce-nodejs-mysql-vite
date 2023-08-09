@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AllDepartments from "../components/header/AllDepartments";
+import MenuDoubleBarIcon from "../assets/icons/MenuDoubleBarIcon";
 
 const BottomHeader = () => {
   // const [hidden, setHidden] = useState("hidden");
@@ -13,13 +14,13 @@ const BottomHeader = () => {
   };
 
   return (
-    <div className="relative flex h-10 items-center px-8 ">
+    <div className="relative flex h-10 items-center justify-between px-8 lg:justify-normal ">
       <AllDepartments />
       <button
         onClick={handleMenu}
-        className="ml-auto rounded-md bg-orange-500 px-3 py-2 font-semibold text-white shadow-md transition-all duration-500 hover:bg-gray-100 hover:text-gray-700 lg:hidden"
+        className="rounded-md bg-orange-500 px-3 py-2 font-semibold text-white shadow-md transition-all duration-500 hover:bg-gray-100 hover:text-gray-700 lg:hidden"
       >
-        Menu
+        <MenuDoubleBarIcon css="w-4 h-4" />
       </button>
       <div
         className={`${opacity} absolute right-8 top-10 z-40 flex w-1/2 flex-col whitespace-nowrap rounded-b-md bg-gray-100 p-3 shadow-xl transition-all  duration-500 lg:relative lg:top-0 lg:flex lg:flex-row lg:items-center lg:bg-transparent lg:opacity-100 lg:shadow-none`}

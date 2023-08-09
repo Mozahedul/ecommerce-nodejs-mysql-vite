@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import FullStarIcon from "../assets/icons/FullStarIcon.jsx";
 import EmptyStarIcon from "../assets/icons/EmptyStarIcon.jsx";
@@ -6,9 +5,9 @@ import EmptyStarIcon from "../assets/icons/EmptyStarIcon.jsx";
 const SelectedProduct = (props) => {
   const { title, url, price } = props;
   return (
-    <div className="mt-1 flex h-48 cursor-pointer items-center justify-between bg-white p-4 shadow-sm lg:p-3">
+    <div className="mt-1 flex h-36 cursor-pointer items-center justify-between bg-white p-4 shadow-sm lg:p-3">
       <div className="w-2/5">
-        <img src={url} alt="featured products" className="w-44 max-w-full" />
+        <img src={url} alt="featured products" className="w-32" />
       </div>
       <div className="ml-2 w-3/5">
         <h2 className="text-sm font-bold text-sky-600">{title}</h2>

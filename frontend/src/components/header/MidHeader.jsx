@@ -53,7 +53,7 @@ const MidHeader = () => {
           </button>
           {/* Search section */}
           <div
-            className={`${hidden} absolute left-4 right-4 top-28 z-50 order-1 items-center justify-between border-2 bg-white transition-all duration-500 md:absolute md:left-36 md:right-36 lg:relative lg:left-0 lg:top-0  lg:flex`}
+            className={`${hidden} absolute left-4 right-4 top-28 z-50 order-1 items-center border-2 bg-white transition-all duration-500 md:absolute md:left-36 md:right-36 lg:relative lg:left-0 lg:top-0  lg:flex`}
           >
             <form>
               <input
@@ -62,7 +62,7 @@ const MidHeader = () => {
                 className="border-none bg-transparent p-2 outline-none"
               />
             </form>
-            <div className="ml-auto pr-2">
+            <div className="ml-auto overflow-x-hidden pr-2">
               <select className="border-none bg-transparent text-gray-500 outline-none">
                 <option>All Categories</option>
                 <option>Accessories</option>
@@ -83,7 +83,7 @@ const MidHeader = () => {
             </div>
             <div className="h-full bg-orange-400">
               <button className="hover:bg-orange-500">
-                <SearchIcon css="inline-block text-white w-8 h-6 m-2" />
+                <SearchIcon css="text-white w-8 h-6 m-2" />
               </button>
             </div>
           </div>
