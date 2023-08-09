@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 import { useState } from "react";
 import CompareIcon from "../../assets/icons/CompareIcon";
 import MenubarIcon from "../../assets/icons/MenubarIcon";
@@ -8,6 +7,7 @@ import UserIcon from "../../assets/icons/UserIcon";
 import WishlistIcon from "../../assets/icons/WishlistIcon";
 import Sidebar from "../../sections/Sidebar";
 import CloseIcon from "../../assets/icons/CloseIcon";
+import { Link } from "react-router-dom";
 
 const MidHeader = () => {
   const [hidden, setHidden] = useState("hidden");
@@ -28,7 +28,9 @@ const MidHeader = () => {
   return (
     <div className="flex items-center justify-between border-b-2 px-8 py-5 md:py-6">
       <div>
-        <img className="w-24 md:w-32" src="/logo.svg" alt="logo" />
+        <Link to="/">
+          <img className="w-24 md:w-32" src="/logo.svg" alt="logo" />
+        </Link>
       </div>
       {/* Search bar */}
       <div className="flex items-center justify-between">
@@ -53,7 +55,7 @@ const MidHeader = () => {
           </button>
           {/* Search section */}
           <div
-            className={`${hidden} absolute left-4 right-4 top-28 z-50 order-1 items-center border-2 bg-white transition-all duration-500 md:absolute md:left-36 md:right-36 lg:relative lg:left-0 lg:top-0  lg:flex`}
+            className={`${hidden} absolute left-4 right-4 top-28 z-30 order-1 items-center border-2 bg-white transition-all duration-500 md:absolute md:left-36 md:right-36 lg:relative lg:left-0 lg:top-0  lg:flex`}
           >
             <form>
               <input
