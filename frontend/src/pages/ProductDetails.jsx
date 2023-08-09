@@ -83,7 +83,7 @@ const ProductDetails = () => {
             />
           </div>
         </div>
-        <div className="order-1 w-full rounded-md bg-white p-8 lg:order-2 lg:ml-8 lg:w-4/5">
+        <div className="order-1 w-full rounded-md bg-white p-3 md:p-8 lg:order-2 lg:ml-8 lg:w-4/5">
           <div className="font-base py-4 text-center text-lg ">
             <button
               onClick={(event) => handleDetails(event, "description")}
@@ -104,7 +104,7 @@ const ProductDetails = () => {
               Reviews
             </button>
           </div>
-          <div className="rounded-2xl border-2 p-6">
+          <div className="rounded-2xl border-2 p-2 md:p-6">
             <div
               id="description"
               className="details transition-all duration-500"

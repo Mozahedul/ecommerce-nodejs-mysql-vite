@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const ProductReview = ({ icon }) => {
   console.log("ICON ==> ", icon);
   return (
-    <div className="mt-2 flex items-center justify-between">
+    <div className="mt-2 flex items-center">
       <div className="flex">
         <FullStarIcon css="text-yellow-500 w-5 h-5" />
         <FullStarIcon css="text-yellow-500 w-5 h-5" />
@@ -20,7 +20,7 @@ const ProductReview = ({ icon }) => {
       </div>
       <div className="ml-8 flex items-center">
         <p
-          className={`padding-3 h-2 w-60 rounded-full ${
+          className={`padding-3 md:48 h-2 w-32 rounded-full ${
             icon === "Yes" ? "bg-gray-400" : "bg-gray-200"
           }`}
         ></p>

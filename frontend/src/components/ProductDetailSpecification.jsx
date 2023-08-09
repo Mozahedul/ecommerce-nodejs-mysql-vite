@@ -8,7 +8,7 @@ const ProductDetailSpecification = () => {
       </h1>
       <div>
         <table className="flex">
-          <thead className="w-2/4 text-left lg:w-2/5">
+          <thead className="w-2/4 text-left text-sm md:text-base lg:w-2/5">
             <tr>
               <th className="py-2">Brand</th>
             </tr>
@@ -64,7 +64,7 @@ const ProductDetailSpecification = () => {
               <th className="py-2">Average Battery Life (in hours)</th>
             </tr>
           </thead>
-          <tbody className="w-2/4 lg:w-3/5">
+          <tbody className="w-2/4 text-sm md:text-base lg:w-3/5">
             <tr>
               <td className="py-2">Apple</td>
             </tr>

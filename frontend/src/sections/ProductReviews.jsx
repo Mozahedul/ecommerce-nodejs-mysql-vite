@@ -4,8 +4,8 @@ import EmptyStarIcon from "../assets/icons/EmptyStarIcon";
 const ProductReviews = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex">
-        <div className="mr-8 w-2/4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+        <div className="mr-8">
           <h2 className="mb-6 text-lg font-semibold">Based on 1 review</h2>
           <p className="mb-6 flex flex-col">
             <span className="text-4xl font-bold">4.0</span>
@@ -19,7 +19,7 @@ const ProductReviews = () => {
             <ProductReview icon="No" />
           </div>
         </div>
-        <div className="ml-8 w-2/4">
+        <div className="mt-8 lg:ml-8 lg:mt-0">
           <h2>Add a review</h2>
           <div className="flex items-center">
             <strong className="w-2/5">Your Rating</strong>
