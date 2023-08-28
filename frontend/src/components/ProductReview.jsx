@@ -1,4 +1,3 @@
-import React from "react";
 import FullStarIcon from "../assets/icons/FullStarIcon";
 import EmptyStarIcon from "../assets/icons/EmptyStarIcon";
 import PropTypes from "prop-types";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import WishlistIcon from "../assets/icons/WishlistIcon";
 import CompareIcon from "../assets/icons/CompareIcon";
 import CartIcon from "../assets/icons/CartIcon";
@@ -18,6 +18,7 @@ const ProductDetailDescription = () => {
     count++;
     setCount(count);
   };
+  console.log("Hello world");
 
   const handleDecrement = () => {
     if (count <= 1) {

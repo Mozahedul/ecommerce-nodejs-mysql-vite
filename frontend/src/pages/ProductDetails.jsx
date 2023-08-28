@@ -22,6 +22,7 @@ const ProductDetails = () => {
       btnLists[i].style.borderBottom = "none";
       btnLists[i].style.color = "gray";
     }
+
     document.getElementById(id).style.display = "block";
     event.target.style.fontWeight = "bold";
     event.target.style.borderBottom = "2px solid orange";

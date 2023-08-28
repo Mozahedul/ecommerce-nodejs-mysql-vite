@@ -1,9 +1,9 @@
-import React from "react";
 import CartIcon from "../assets/icons/CartIcon";
 import PropTypes from "prop-types";
 
 const BestSellingProduct = (props) => {
   const { subtitle, title, url, price } = props;
+
   return (
     <div className="flex items-center justify-between border-b-2 p-6 last:border-b-0 md:border-none md:p-3 md:shadow-sm">
       <div className="w-2/5">

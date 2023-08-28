@@ -9,8 +9,6 @@ const RecentProducts = () => {
   const [isRightBtnDisabled, setIsRightBtnDisabled] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const [activeBtn, setActiveBtn] = useState(0);
-
   const element = document.getElementById("container");
   const totalWidth = element?.clientWidth;
   const elementNumber = Math.floor(totalWidth / 190);
